@@ -21,6 +21,28 @@
     <p><label>BMI：<output name="bmi"></output></label></p>
     </form>
     <hr>
+    <form onsubmit="return false">
+    <input type="number" id="num01"> 演算
+    <input type="number" id="num02"> =
+    <output for="num01 num02" id="result0"></output>
+
+    <!-- ラジオボタン選択肢 -->
+    <input id="plus" type="radio" name="cal0" value="+" checked>
+    <label for="plus">足す</label>
+    <input id="minus" type="radio" name="cal0" value="-">
+    <label for="minus">引く</label>
+    <input id="multiply" type="radio" name="cal0" value="*">
+    <label for="multiply">掛ける</label>
+    <input id="divide" type="radio" name="cal0" value="/">
+    <label for="divide">割る</label>
+
+    <button onclick="result0.value =
+    (cal0[0].checked)? Number(num01.value) + Number(num02.value) :
+    (cal0[1].checked)? Number(num01.value) - Number(num02.value) :
+    (cal0[2].checked)? Number(num01.value) * Number(num02.value) :
+    (cal0[3].checked)? Number(num01.value) / Number(num02.value) : NaN">計算</button>
+    </form>
+    <hr>
     <h1>お薦めな旅行先</h1>
     <hr>
     <div>
